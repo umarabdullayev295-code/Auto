@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSmart - Shaxsiy Kabinet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <i class="fas fa-parking"></i> Park<span>Smart</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="locations.html">Manzillar</a></li>
+            <li><a href="pricing.html">Tariflar</a></li>
+            <li><a href="dashboard.html" class="active">Kabinet</a></li>
+        </ul>
+        <div class="user-profile-mini">
+            <img src="https://ui-avatars.com/api/?name=Ali+Valiyev&background=6366f1&color=fff" alt="User" class="avatar-mini">
+            <span>Ali V.</span>
+        </div>
+    </nav>
+
+    <main class="dashboard-section">
+        <div class="dashboard-sidebar glass-panel">
+            <div class="user-info-full">
+                <img src="https://ui-avatars.com/api/?name=Ali+Valiyev&background=6366f1&color=fff&size=100" alt="User">
+                <h3>Ali Valiyev</h3>
+                <p>+998 90 123 45 67</p>
+                <div class="badge-premium"><i class="fas fa-crown"></i> VIP A'zo</div>
+            </div>
+            <ul class="dashboard-menu">
+                <li class="active"><a href="#"><i class="fas fa-ticket-alt"></i> Faol Bronlar</a></li>
+                <li><a href="#"><i class="fas fa-car"></i> Avtomobillarim</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> To'lovlar tarixi</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Sozlamalar</a></li>
+                <li class="logout"><a href="index.html"><i class="fas fa-sign-out-alt"></i> Chiqish</a></li>
+            </ul>
+        </div>
+
+        <div class="dashboard-content">
+            <h2 class="dash-title">Faol Bronlar</h2>
+            
+            <div class="booking-ticket glass-panel">
+                <div class="ticket-header">
+                    <div class="ticket-status active">Faol</div>
+                    <div class="ticket-id">#BRN-84592</div>
+                </div>
+                <div class="ticket-body">
+                    <div class="ticket-info">
+                        <h4>Tashkent City Park - Premium</h4>
+                        <p><i class="fas fa-calendar"></i> Bugun</p>
+                        <p><i class="fas fa-clock"></i> 14:00 - 16:00 (2 soat)</p>
+                    </div>
+                    <div class="ticket-car">
+                        <div class="car-plate">01 A 123 AA</div>
+                        <p>Chevrolet Malibu</p>
+                    </div>
+                    <div class="ticket-qr">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=BRN-84592&bgcolor=ffffff" alt="QR Code">
+                        <p>Shlagbaum uchun</p>
+                    </div>
+                </div>
+                <div class="ticket-footer">
+                    <button class="btn-outline small-btn"><i class="fas fa-times"></i> Bekor qilish</button>
+                    <button class="btn-primary small-btn"><i class="fas fa-clock"></i> Vaqtni uzaytirish</button>
+                </div>
+            </div>
+
+            <h2 class="dash-title mt-4">Mening Avtomobillarim</h2>
+            <div class="cars-grid">
+                <div class="car-card glass-panel">
+                    <i class="fas fa-car-side car-icon"></i>
+                    <h4>Chevrolet Malibu</h4>
+                    <div class="car-plate">01 A 123 AA</div>
+                    <div class="car-actions">
+                        <button class="btn-icon"><i class="fas fa-pen"></i></button>
+                        <button class="btn-icon text-danger"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="car-card add-new-car glass-panel">
+                    <i class="fas fa-plus"></i>
+                    <p>Yangi avtomobil qo'shish</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

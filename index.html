@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSmart - Bosh sahifa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <i class="fas fa-parking"></i> Park<span>Smart</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Bosh sahifa</a></li>
+            <li><a href="locations.html">Manzillar</a></li>
+            <li><a href="pricing.html">Tariflar</a></li>
+            <li><a href="login.html">Kabinet</a></li>
+        </ul>
+        <a href="login.html" class="btn-outline" style="text-decoration: none;"><i class="fas fa-user-circle"></i> Kirish</a>
+    </nav>
+
+    <main class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="badge">
+                <i class="fas fa-star" style="color: #fbbf24;"></i> Yangi Premium Avtoturargohlar
+            </div>
+            <h1>Avtomobilingiz uchun <br><span class="gradient-text">eng yaxshi joyni</span> band qiling</h1>
+            <p>Vaqtingizni tejang va xotirjamlikni his eting. Shaharning eng qulay nuqtalaridan avtoturargoh joylarini bir necha soniyada onlayn bron qiling.</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Manzillar</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Xavfsizlik</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10k+</h3>
+                    <p>Mamnun mijozlar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-glass-panel">
+            <h2>Joyni bron qilish</h2>
+            <form id="bookingForm">
+                <div class="input-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Manzilni tanlang</label>
+                    <select required id="locationSelect">
+                        <option value="" disabled selected>Viloyat yoki manzilni tanlang...</option>
+                        <option value="tashkent">1. Toshkent - Tashkent City Park</option>
+                        <option value="andijan">2. Andijon - Bobur Premium</option>
+                        <option value="bukhara">3. Buxoro - Ark Parking</option>
+                        <option value="fergana">4. Farg'ona - Markaziy Turargoh</option>
+                        <option value="jizzakh">5. Jizzax - Sharof Rashidov</option>
+                        <option value="khorazm">6. Xorazm - Ichan-Qal'a</option>
+                        <option value="namangan">7. Namangan - Afsonalar Vodiysi</option>
+                        <option value="navoiy">8. Navoiy - Farhod Markazi</option>
+                        <option value="qashqadaryo">9. Qashqadaryo - Nasaf Premium</option>
+                        <option value="samarqand">10. Samarqand - Registon Square</option>
+                        <option value="sirdaryo">11. Sirdaryo - Guliston Markazi</option>
+                        <option value="surxondaryo">12. Surxondaryo - Termiz VIP</option>
+                        <option value="karakalpakstan">13. Qoraqalpog'iston - Nukus Mega</option>
+                    </select>
+                </div>
+
+                <div class="date-time-group">
+                    <div class="input-group">
+                        <label><i class="fas fa-calendar-alt"></i> Sana</label>
+                        <input type="date" required id="dateInput">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-clock"></i> Vaqt (dan)</label>
+                        <input type="time" required id="timeInput">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-hourglass-half"></i> Qancha muddatga (soat)</label>
+                    <input type="number" id="durationInput" min="1" max="24" value="1" required>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-car"></i> Avtomobil raqami</label>
+                    <input type="text" placeholder="Masalan: 01 A 123 AA" required pattern="^[0-9]{2} [a-zA-Z]{1} [0-9]{3} [a-zA-Z]{2}$|^[0-9]{2} [0-9]{3} [a-zA-Z]{3}$" title="Avtomobil raqamini to'g'ri formatda kiriting (Masalan: 01 A 123 AA yoki 01 123 AAA)">
+                </div>
+
+                <div class="price-estimate">
+                    <span>Jami summa:</span>
+                    <strong>15 000 so'm</strong>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <span>Joyni Band Qilish</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

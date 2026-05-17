@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSmart - Tizimga Kirish</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <i class="fas fa-parking"></i> Park<span>Smart</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="locations.html">Manzillar</a></li>
+            <li><a href="pricing.html">Tariflar</a></li>
+            <li><a href="login.html" class="active">Kabinet</a></li>
+        </ul>
+        <a href="login.html" class="btn-outline" style="text-decoration: none;"><i class="fas fa-user-circle"></i> Kirish</a>
+    </nav>
+
+    <main class="page-section" style="display:flex; justify-content:center; align-items:center; min-height:80vh; padding-top:8rem;">
+        <div class="booking-glass-panel" style="width:100%; max-width:450px; flex:none;">
+            <h2 style="text-align:center; margin-bottom:2rem;">Tizimga Kirish</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label><i class="fas fa-user"></i> Login</label>
+                    <input type="text" id="loginUsername" placeholder="Loginingizni kiriting" required>
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-lock"></i> Parol</label>
+                    <input type="password" id="loginPassword" placeholder="Parolingizni kiriting" required>
+                </div>
+                
+                <div id="loginError" style="color:#ef4444; font-size:0.95rem; margin-top:1rem; margin-bottom:1rem; display:none; text-align:center; background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); padding:0.8rem; border-radius:8px;">
+                    Login yoki parol noto'g'ri!
+                </div>
+
+                <button type="submit" class="btn-primary" style="margin-top:1.5rem;">
+                    <span>Kirish</span>
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
+            <div style="text-align:center; margin-top:1.5rem; color:var(--text-muted); font-size:0.9rem;">
+                Test uchun ma'lumotlar:<br>
+                Login: <strong style="color:white; cursor:pointer;" onclick="document.getElementById('loginUsername').value='Admin'">Admin</strong><br>
+                Parol: <strong style="color:white; cursor:pointer;" onclick="document.getElementById('loginPassword').value='admin1234'">admin1234</strong>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
