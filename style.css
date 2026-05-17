@@ -861,6 +861,18 @@ body {
 }
 
 /* Responsive fixes for new pages */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-only-btn {
+    display: none;
+}
+
 @media (max-width: 992px) {
     .dashboard-section {
         flex-direction: column;
@@ -870,6 +882,7 @@ body {
         width: 100%;
         height: auto;
         position: static;
+        margin-bottom: 2rem;
     }
     
     .ticket-body {
@@ -879,5 +892,80 @@ body {
     
     .pricing-card.popular {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .desktop-only-btn {
+        display: none !important;
+    }
+    
+    .nav-links {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(7, 9, 19, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        border-left: 1px solid var(--glass-border);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .mobile-only-btn {
+        display: block;
+    }
+    
+    .page-section, .hero-section {
+        padding: 7rem 4% 3rem;
+    }
+
+    .hero-content h1, .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .locations-grid, .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ticket-body {
+        text-align: center;
+    }
+    
+    .ticket-footer, .date-time-group {
+        flex-direction: column;
+    }
+    
+    .ticket-footer button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1, .page-header h1 {
+        font-size: 2rem;
+    }
+    .booking-glass-panel {
+        padding: 1.5rem;
     }
 }

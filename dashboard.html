@@ -18,13 +18,21 @@
         <a href="index.html" class="logo" style="text-decoration: none;">
             <i class="fas fa-parking"></i> Park<span>Smart</span>
         </a>
-        <ul class="nav-links">
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Bosh sahifa</a></li>
             <li><a href="locations.html">Manzillar</a></li>
             <li><a href="pricing.html">Tariflar</a></li>
             <li><a href="dashboard.html" class="active">Kabinet</a></li>
+            <li class="mobile-only-btn">
+                <div class="user-profile-mini" style="justify-content:center; margin-top:1rem; cursor:pointer;" onclick="window.location.href='index.html'">
+                    <i class="fas fa-sign-out-alt"></i> Chiqish
+                </div>
+            </li>
         </ul>
-        <div class="user-profile-mini">
+        <div class="user-profile-mini desktop-only-btn">
             <img src="https://ui-avatars.com/api/?name=Ali+Valiyev&background=6366f1&color=fff" alt="User" class="avatar-mini">
             <span>Ali V.</span>
         </div>
